@@ -1,0 +1,14 @@
+// db:test collection:villa  
+Create(
+  Ref( 
+    
+    Collection('villa'), '2' 
+       
+    ), 
+    
+    { data:{ name: "villa-2", price: "120" } }
+    
+  )
+// db:test collection:villa   select data by  name
+
+q.Select("data", q.Paginate( q.Match("villa_by_name")))
